@@ -28,7 +28,6 @@ class ImageController extends Controller
 		}
 		$options = $this->explodeOptions($options);
 		$image = $this->generateImage($options, $slug);
-		
 		return $image;
     }
 	
@@ -56,7 +55,7 @@ class ImageController extends Controller
 					$img = $img->$func($val[1]);
 				}
 			}
-		}, 10, true);
+		}, 86400, true);
 		return $image->response($this->getExtension($slug), $this->quality);
     }
     

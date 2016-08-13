@@ -18,3 +18,5 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+
+Header set Cache-Control "max-age=2628000, public"
